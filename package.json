@@ -1,0 +1,31 @@
+{
+  "name": "consent-autoblock-sdk",
+  "version": "0.1.0",
+  "description": "A small OneTrust-like cookie consent SDK with automatic script blocking.",
+  "type": "module",
+  "main": "dist/consent-sdk.umd.js",
+  "module": "dist/consent-sdk.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/consent-sdk.js",
+      "require": "./dist/consent-sdk.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "dev": "vite --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^2.1.9",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.9"
+  }
+}

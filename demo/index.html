@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consent SDK Demo</title>
+
+    <script
+      src="/dist/consent-sdk.umd.js"
+      data-consent-auto
+      data-auto-block="true"
+      data-banner="true"
+      data-debug="true"
+      data-brand-name="Demo Privacy"
+      data-banner-title="Cookie settings"
+      data-banner-description="Optional scripts are blocked until consent is granted."
+    ></script>
+
+    <script src="/demo/scripts/necessary.js" data-consent-category="necessary"></script>
+    <script src="/demo/scripts/functional.js" data-consent-category="functional"></script>
+    <script src="/demo/scripts/analytics.js" data-consent-category="analytics"></script>
+    <script src="/demo/scripts/marketing.js" data-consent-category="marketing"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-DEMO"></script>
+    <script src="https://connect.facebook.net/en_US/fbevents.js"></script>
+  </head>
+  <body>
+    <!-- OneTrust cookies settings button start -->
+    <button id="ot-sdk-btn" class="ot-sdk-show-settings" onclick="ConsentSDK.showSettings()">
+      Cookie settings
+    </button>
+    <!-- OneTrust cookies settings button end -->
+
+    <!-- OneTrust cookies list start -->
+    <div id="ot-sdk-cookie-policy"></div>
+    <!-- OneTrust cookies list end -->
+  </body>
+</html>
